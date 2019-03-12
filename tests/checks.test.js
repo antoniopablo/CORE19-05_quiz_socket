@@ -97,7 +97,6 @@ describe("CORE19-05_quiz_socket", function () {
                 fs.copySync(quizzes_orig, quizzes_back, {"overwrite": true});
                 fs.copySync(quizzes_test, quizzes_orig, {"overwrite": true});
             } catch (e) {
-                error_deps = e;
             }
             if (error_deps) {
                 this.msg_err = "Error copying the answers file: " + error_deps;
