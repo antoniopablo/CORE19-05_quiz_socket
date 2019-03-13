@@ -93,8 +93,8 @@ describe("CORE19-05_quiz_socket", function () {
 
             // replace answers file
             let error_deps;
+            try {fs.copySync(quizzes_orig, quizzes_back, {"overwrite": true});} catch (e){{}}
             try {
-                fs.copySync(quizzes_orig, quizzes_back, {"overwrite": true});
                 fs.copySync(quizzes_test, quizzes_orig, {"overwrite": true});
             } catch (e) {
             }
